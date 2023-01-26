@@ -1,0 +1,178 @@
+/* Navigation bar css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: lightsteelblue;
+
+}
+
+header {
+    background: black;
+    height: 66px;
+    border-bottom: 2px solid yellow;
+    border-top: 2px solid yellow;
+    font-family: 'Poppins', sans-serif;
+}
+
+header * {
+    color: white;
+}
+header .menu{
+    display: none;
+}
+
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+
+}
+
+header .logo-txt {
+    margin: 9px;
+    font-family: 'Lobster', cursive;
+}
+
+header .logo-txt span {
+    color: aqua;
+}
+
+header .logo-txt span sup {
+    color: aquamarine;
+}
+
+
+header ul {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    font-weight: bold;
+    background: black;
+    color: white;
+
+}
+
+header ul li ul a.logout {
+    color: red;
+}
+
+/* header ul li ul li a:hover{
+
+ 
+} */
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+}
+
+header ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* //responisve code for navbar */
+@media only screen and (max-width:750px){
+    header ul{
+        width: 100%;
+        background: black;
+        max-height: 0px;
+        overflow: hidden;
+    }
+    .showing{
+        max-height: 100em;
+    }
+    
+    header ul li{
+        width: 100%;
+        
+    }
+    header ul li ul {
+        position: static;
+        display: block;
+        width: 100%;
+    }
+    header ul li ul li a {
+        padding: 10px;
+        font-weight: bold;
+        background: black;
+        color: white;
+        padding-left: 50px;
+    
+    }
+    
+    header ul li ul a.logout {
+        color: red;
+    }
+    header .menu{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+        font-size: 1.9em;
+    }
+    header .logo {
+       
+        margin-left: .5em;
+    
+    }
+    
+    header .logo-txt {
+        margin: 9px;
+        font-family: 'Lobster', cursive;
+    }
+    
+    header .logo-txt span {
+        color: aqua;
+    }
+
+    header ul li a::after {
+        display: none;
+    }
+     
+}
